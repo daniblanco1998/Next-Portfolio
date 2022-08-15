@@ -8,6 +8,7 @@ import { useState } from 'react'
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('/')
+
   return (
     <nav className={styles.nav}>
       <ul className='ul'>

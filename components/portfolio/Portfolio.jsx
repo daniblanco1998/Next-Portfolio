@@ -12,52 +12,31 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: 'Gestor de tareas(CRUD).',
+    title: 'Task Manager(CRUD API requests).',
     github: 'https://github.com/daniblanco1998',
     demo: '/tasksApi'
   },
   {
-    id: 2,
-    image: IMG2,
-    title: 'Calculadora de interes compuesto.',
-    github: 'https://github.com/daniblanco1998',
-    demo: '/proyectoCalculadora'
-  },
-  {
     id: 3,
     image: IMG3,
-    title: 'Figma dashboard UI kit fror data desing wed apps',
+    title: 'Image search engine(requests to external APIs)',
     github: 'https://github.com/daniblanco1998',
     demo: '/proyectoImage'
   },
   {
     id: 4,
     image: IMG4,
-    title: 'Maintaining tasks and tracking progress',
+    title: 'Mock login',
     github: 'https://github.com/daniblanco1998',
     demo: '/loginDemo'
   },
-  {
-    id: 5,
-    image: IMG5,
-    title: 'Charts templates & infographics in Figma',
-    github: 'https://github.com/daniblanco1998',
-    demo: '/proyectoCalculadora'
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: 'Charts templates & infographics in Figma',
-    github: 'https://github.com/daniblanco1998',
-    demo: '/proyectoCalculadora'
-  }
 ]
 
 export const Portfolio = () => {
   return (
     <section id='portfolio'>
-      <h5>My Recent Work</h5>
-      <h2>MY PROYECTS</h2>
+      <h4>My Recent Work</h4>
+      <h2>PROYECTS</h2>
 
       <div id='container' className={styles.portfolio__container}>
         {
@@ -71,7 +50,9 @@ export const Portfolio = () => {
                 <p>descripcion</p>
                 <div className={styles.portfolio__item_cta}>
                   <a href={github} className='btn'target='blank'>Github</a>
-                  <Link href={demo} className='btn btn-primary' target='blank'>Live Demo</Link>
+                  <Link href={demo} className='btn'>
+                    <a href={demo} className='btn'>Live demo</a>
+                  </Link>
                 </div>
               </article>
             )

@@ -1,7 +1,7 @@
 
 import { Layout } from "../../../../components/taskComponents/Layout"
 import Error from "next/error"
-import { Button, Grid, Confirm, Loader} from "semantic-ui-react"
+import { Button, Grid, Confirm} from "semantic-ui-react"
 import { useState } from "react"
 import { useRouter } from "next/router"
 

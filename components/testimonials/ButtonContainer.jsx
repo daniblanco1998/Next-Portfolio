@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const ModalContainer = styled.div`
-    padding: 10px;
+    padding: 40px;
     display: flex; 
     flex-wrap: wrap;
     justify-content: center;

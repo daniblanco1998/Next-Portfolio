@@ -1,15 +1,57 @@
 import styled from 'styled-components'
 import Container from '../../components/loginStyles/Container'
 import Button from '../../components/loginStyles/LoginButton'
-import Form from '../../components/loginStyles/Form'
-import Input from '../../components/loginStyles/Input'
-import Link from 'next/link'
+import { getSession, signOut } from 'next-auth/react'
 
-const ContainerButton = styled.div`
-    display: flex;
-    flex-direction: raw;
-    justify-content: space-evenly;
-`
+
+function HomePage({session}) {
+ 
+
+  return (
+    <Container>
+      {session ? (
+        
+        <div>
+          <Title>TU PERFIL</Title>
+          <Name>{session.user.name}</Name>
+          <Email>{session.user.email}</Email>
+          <Image src={session.user.image} alt="" />
+        </div>
+        
+      ) : (
+        <p>Skeleton</p>
+      )}
+
+      <Button onClick={() => signOut('github')}>
+          Logout
+      </Button>
+        
+
+    </Container>
+  )
+}
+
+export const getServerSideProps = async (context) => {
+
+  const session = await getSession(context)
+
+  if(!session) return {
+    redirect:{
+      destination: '/loginDemo/login',
+      permanent: false 
+    }
+  }
+
+  return {
+    props: {
+      session
+    }
+  }
+}
+
+export default HomePage
+
+
 const Title = styled.h1`
   font-weight: normal;
   color: #eee;
@@ -17,20 +59,26 @@ const Title = styled.h1`
   text-align: center;
 `
 
-const LoginDemo = () => {
-    return (
-        <Container>
-            <Form>
-                <Title>LOGIN</Title>
-                <Input placeholder="Usuario..." />
-                <Input placeholder="Contraseña..."/>
-                <ContainerButton>
-                    <Button>Entrar</Button>
-                    <Link href="/loginDemo/register"><Button>Register</Button></Link>
-                </ContainerButton>
-            </Form>
-        </Container>
-    )
-}
+const Name = styled.h2`
+font-weight: normal;
+color: #eee;
+text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+text-align: center; 
 
-export default LoginDemo
+`
+
+const Email = styled.p`
+font-weight: normal;
+color: #eee;
+text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+text-align: center;
+`
+
+const Image = styled.img`
+  width:300px;
+  height:300px;
+  border-radius:160px;
+  border:2px solid #f03d4e;
+  margin: 30px;
+
+`

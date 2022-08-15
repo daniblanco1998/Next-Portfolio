@@ -13,21 +13,21 @@ const data = [
     media:'Email',
     addres:"mailto:danieloropeza98sc@gmail.com",
     nameAddres: 'danieloropeza98sc@gmail.com', 
-    sendAddres:'enviar un correo',
+    sendAddres:'Send an email',
     icon: <MdOutlineMarkEmailUnread className={styles.contact__option_icon}/>
   },
   {
     media:'Linkedin',
     addres:"https://www.linkedin.com/in/luisblanco-developper",
     nameAddres: 'linkedin.com/in/luisblanco-developper', 
-    sendAddres:'Ir al feed',
+    sendAddres:'Go to feed',
     icon: <BsLinkedin className={styles.contact__option_icon}/>
   },
   {
     media:'Whatsapp',
     addres:"https://api.whatsapp.com/send/?phone=5491124099365",
     nameAddres: '+5491124099365', 
-    sendAddres:'Enviar whatsapp',
+    sendAddres:'Send whatsapp',
     icon: <IoLogoWhatsapp className={styles.contact__option_icon}/>
   }
 ]
@@ -46,8 +46,8 @@ export const Contact = () => {
 
   return (
     <section id='contact'>
-      <h5>Get In Touch</h5>
-      <h2>CONTACTAME</h2>
+      <h4>Here you can</h4>
+      <h2>CONTACT ME</h2>
 
       <div className={styles.contact__container}>
         <div className={styles.contact__options}>
@@ -68,27 +68,27 @@ export const Contact = () => {
           validationSchema={Yup.object({
             name: Yup
               .string()
-              .required('Campo Obligatorio!')
+              .required('Required!')
               .typeError('Solo se puede ingresar texto!'),
             email: Yup
               .string()
-              .email('Correo invalido')
-              .required('Campo Obligatorio!'),
+              .email('Invalid email')
+              .required('Required!!'),
             message: Yup
               .string()
-              .required('Campo Obligatorio!')
-              .min(20, 'Debe escribir minimo 20 caracteres!')
-              .max(200, 'Existe un limite de 200 caracteres para este campo!')
+              .required('Required!!')
+              .min(20, 'You must write at least 20 characters!')
+              .max(200, 'There is a 200 character limit for this field!')
           })}
           onSubmit={() =>{
             cambiarFormularioEnviado (true)
           }}
         >
           <Form onSubmit={sendEmail}>
-            <InputContact type="text" name='name' placeholder='Nombre y apellido' className='input'/>
-            <InputContact type="email" name='email' placeholder='Correo' className='input'/>
-            <InputContact as='textarea' name="message" rows="7" placeholder='Mensaje...' className='input'/>
-            <button type='submit' className='btn btn-primary'>Enviar mensaje</button>
+            <InputContact type="text" name='name' placeholder='Name and lastname' className='input'/>
+            <InputContact type="email" name='email' placeholder='Email' className='input'/>
+            <InputContact as='textarea' name="message" rows="7" placeholder='Message...' className='input'/>
+            <button type='submit' className='btn btn-primary'>Send message</button>
           </Form>
         </Formik>
       </div>

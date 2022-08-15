@@ -15,7 +15,7 @@ export const Header = () => {
     <div className={styles.sectionHeader}>
       <header className={styles.header}>
         <div id='container' className={styles.header__Container}>
-          <h5>Hola soy</h5>
+          <h5>Hi, I'm</h5>
           <h1>Daniel Blanco</h1>
           <h5 className="text-light">FullStack Developer</h5>
           <CTA/>

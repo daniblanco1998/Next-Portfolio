@@ -3,7 +3,24 @@ import {Formik, Form, Field} from 'formik'
 import stylesArticles from '../styles/pimg_articles.module.css'
 import stylesContent from '../styles/pimg_content.module.css'
 import stylesHeader from '../styles/pimg_header.module.css'
-import Image from 'next/image';
+import {BiSearchAlt2} from 'react-icons/bi'
+import styled from 'styled-components'
+
+
+const Button = styled.button`
+  max-width: 30%;
+  padding: 5px 13px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  margin-right: 20px;
+  position: absolute;
+`
 
 const App = () => {
   const [photos, setPhotos] = useState([])
@@ -27,13 +44,16 @@ const App = () => {
         >
           <Form>
             <Field name='search' className='input' placeholder='Buscar'/>
+            <Button type="submit">
+              <BiSearchAlt2/>
+            </Button>
           </Form>
         </Formik>
       </header>
       <div className={stylesContent.container}>
         <div className={stylesContent.center}>
           {photos.map(photo => <article className={stylesArticles.article} key={photo.id} onClick={() => open(photo.links.html)}>
-            <Image src={photo.urls.regular} width={400} height={400}/>
+            <img src={photo.urls.regular}/>
             <p>{[photo.description, photo.alt_description].join(' - ')}</p>
           </article>)}
         </div>

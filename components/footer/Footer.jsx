@@ -11,12 +11,12 @@ export const Footer = () => {
 
       <ul className={styles.permalinks}>
         <li><a href="./#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experiencia</a></li>
-        <li><a href="#services">Servicios</a></li>
-        <li><a href="#portfolio">Proyectos</a></li>
-        <li><a href="#testimonials">Comentarios</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">My Skill</a></li>
+        <li><a href="#services">Portfolio development</a></li>
+        <li><a href="#portfolio">Proyects</a></li>
+        <li><a href="#testimonials">Certificate</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div className={styles.footer__socials}>
@@ -26,7 +26,7 @@ export const Footer = () => {
       </div>
 
       <div className={styles.footer__copyright}>
-        <small>&copy; Todos los derechos reservados a Luis Daniel Blanco Oropeza</small>
+        <small>&copy; All rights reserved to Luis Daniel Blanco Oropeza</small>
       </div>
     </footer>
   )

@@ -13,6 +13,9 @@ const TasksSchema = new mongoose.Schema({
     requiere: [true, "ERROR!: no ha especificado la tarea."],
     trim:true,
     maxlength:[200, 'max de cracteres 200']
+  },
+  state:{
+    type:Boolean
   }
 }, {
   timestamps: true,

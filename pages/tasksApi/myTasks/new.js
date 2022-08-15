@@ -10,6 +10,7 @@ export default function TaskFormPage(){
   const [newTask, setnewTask] = useState({
     title: "",
     plot: "",
+    state: false,
   })
 
   const [errors, setErrors] = useState({

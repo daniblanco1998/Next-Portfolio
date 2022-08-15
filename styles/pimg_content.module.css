@@ -1,6 +1,5 @@
 .container{
     display: flex;
-    background-color: rgb(227, 248, 215);
     justify-content: center;
 }
 

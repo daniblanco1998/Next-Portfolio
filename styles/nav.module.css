@@ -1,64 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 .nav {
-    background: var(--color-bg-variant);
     display: block;
     padding: 0.2rem 7rem;
     z-index: 2;
     position: fixed;
-    left: 50%;
+    left: 80%;
     transform: translateX(-50%);
-    bottom: 2rem;
     display: flex;
     gap: 0.8rem;
     border-radius: 1rem;
 }
 
-.icon__nav{
-    color: var(--color-bg);
-}
-
 .nav ul{
+    position: relative;
     display: flex;
     justify-content: center;
-    width: 80px;
+    align-items: center;
+    width: 100%;
+    
 }
 
 .nav ul li {
-    position: relative;
     list-style: none;
-    width: 60px;
-    height: 45px;
-    z-index: 1;
-}
-
-.nav ul li a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    padding-right: 25px;
-    padding-left: 25px;
-    padding-top: 5px;
-
-}
-
-.nav ul li a .icon__nav{
-    position: relative;
-    display: block;
-    height: 50px;
-    font-size: 1.6em;
-    text-align: center;
-    transition: 0.5s;
-}
-
-.nav ul li.active a .icon__nav{
-    transform: translateY(-30px);
-    color: var(--color-secondary);
 }
 
 .text{
@@ -70,34 +34,173 @@
     transition: 0.5s;
     opacity: 0;
     transform: translateY(15px);
+    
 }
 
-.nav ul li.active a .text{
+.nav ul li a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    padding: 20px 30px;
+
+}
+
+.nav ul li a .icon__nav{
+    font-size: 1.6em;
+    pointer-events: none;
+    opacity: 0.25;
+    transition: 0.25s;
+}
+.nav ul li:hover a .icon__nav{
     opacity: 1;
-    transform: translateY(5px);
 }
 
 .indicator {
     position: absolute;
-    top: -70%;
+    top: 9%;
     width: 60px;
     height: 60px;
-    background: linear-gradient(45deg, transparent, var(--color-primary));
+    background: linear-gradient(45deg, transparent, rgba(81, 162, 228, 0.2));
     border-radius: 50%;
-    border: 2px solid var(--color-primary);
     transition: 0.5s;
+    box-shadow: 0 10px 9px rgba(0, 0, 0, 0.2);
+    
 }
-
 
 .nav ul li:nth-child(1).active ~ .indicator{
-    transform: translateX(calc(60px * -2));
+    transform: translateX(calc(82px * -2));
 }
 .nav ul li:nth-child(2).active ~ .indicator{
-    transform: translateX(calc(60px * -1));
+    transform: translateX(calc(83px * -1));
 }
 .nav ul li:nth-child(4).active ~ .indicator{
-    transform: translateX(calc(60px * 1));
+    transform: translateX(calc(83px * 1));
 }
 .nav ul li:nth-child(5).active ~ .indicator{
-    transform: translateX(calc(60px * 2));
+    transform: translateX(calc(82px * 2));
 }
+
+.nav ul li.active a .text{
+    opacity: 1;
+    transform: translateY(40px);
+}
+
+.nav ul li.active a .icon__nav{
+    opacity: 1;
+    color: var(--color-secondary);
+}
+
+
+/* ================================ MEDIA QUERIES (MEDIUM AND SMALL DEVICES) =======================*/
+
+@media screen and (max-width: 1024px) {
+    .nav {
+        background: linear-gradient(45deg, transparent, rgba(5, 20, 100, 0.5));
+        display: block;
+        padding: 0.9rem 100%;
+        z-index: 2;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        display: flex;
+        gap: 0.8rem;
+    }
+    
+    .icon__nav{
+        color: var(--color-bg);
+    }
+    
+    .nav ul{
+        display: flex;
+        justify-content: center;
+        width: 80px;
+    }
+    
+    .nav ul li {
+        position: relative;
+        list-style: none;
+        width: 60px;
+        height: 45px;
+        z-index: 1;
+    }
+    
+    .nav ul li a{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-top: 5px;
+    
+    }
+    
+    .nav ul li a .icon__nav{
+        color: var(--color-secondary);
+        position: relative;
+        display: block;
+        height: 50px;
+        opacity: 0.6;
+        font-size: 1.6em;
+        text-align: center;
+        transition: 0.5s;
+    }
+    
+    .nav ul li.active a .icon__nav{
+        transform: translateY(-45px);
+        color: var(--color-secondary);
+    }
+    
+    .text{
+        position: absolute;
+        font-weight: 400;
+        font-family: 'Abel', sans-serif;
+        font-size: 0.85em;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    
+    .nav ul li.active a .text{
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+    
+    .indicator {
+        position: absolute;
+        top: -115%;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(45deg, transparent, var(--color-primary));
+        border-radius: 50%;
+        border: 2px solid var(--color-primary);
+        transition: 0.5s;
+    }
+    
+    
+    .nav ul li:nth-child(1).active ~ .indicator{
+        transform: translateX(calc(60px * -2));
+    }
+    .nav ul li:nth-child(2).active ~ .indicator{
+        transform: translateX(calc(60px * -1));
+    }
+    .nav ul li:nth-child(4).active ~ .indicator{
+        transform: translateX(calc(60px * 1));
+    }
+    .nav ul li:nth-child(5).active ~ .indicator{
+        transform: translateX(calc(60px * 2));
+    }
+}
+

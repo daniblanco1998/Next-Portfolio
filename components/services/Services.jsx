@@ -4,104 +4,93 @@ import {GrCheckmark} from 'react-icons/gr'
 export const Services = () => {
   return (
     <section id='services'>
-      <h5>What I Offer</h5>
-      <h2>Services</h2>
+      <h4>Resources used for</h4>
+      <h2>Portfolio development</h2>
         
       <div id='container' className={styles.services__container}>
         
         <article className={styles.service}>
           <div className={styles.service__head}>
-            <h3>WED DEVELOPMENT</h3>
+            <h3>BACKEND</h3>
           </div>
 
           <ul className= {styles.service__list}>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>JavaScript</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>Next.Js</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>MongoDB</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>POO</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>Apis</p>
             </li>
           </ul>
         </article>
-        
-        
-       
-        {/*WED DEVELOPMENT*/}
+      
 
         <article className={styles.service}>
           <div className={styles.service__head}>
-            <h3>QUALITY ASSURANCE</h3>
+            <h3>FRONDEND</h3>
           </div>
 
           <ul className= {styles.service__list}>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>React.Js</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>JSX</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>CSS</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
-            </li>
-            <li>
-              <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>Styled components</p>
             </li>
           </ul>
         </article>
-        {/*QUALITY ASSURANCE*/}
+      
 
         <article className={styles.service}>
           <div className={styles.service__head}>
-            <h3>PROJECT MANAGEMENT</h3>
+            <h3>SERVICIOS</h3>
           </div>
 
           <ul className= {styles.service__list}>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>MongoDB Atlas</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>Vercel</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>React Icons</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
-            </li>
-            <li>
-              <GrCheckmark className={styles.service__list_icon}/>
-              <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+              <p>EmailJs Api</p>
             </li>
           </ul>
         </article>
         
-        {/*PROJECT MANAGEMENT*/}
+        
       </div>
      
 

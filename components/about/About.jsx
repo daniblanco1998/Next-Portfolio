@@ -9,8 +9,8 @@ import { BiCodeBlock } from 'react-icons/bi'
 export const About = () => {
   return (
     <section id='about'>
-      <h5>Get To Know</h5>
-      <h2>MI CARRERA</h2>
+      <h4>know a little</h4>
+      <h2>About Me</h2>
 
       <div id='container' className={styles.about__container}>
         <div className={styles.about__me}>
@@ -24,34 +24,35 @@ export const About = () => {
           <div className={styles.about__cards}>
             <article className={styles.about__card}>
               <BsClipboardCheck className={styles.about__icon} />
-              <h5>Experiencia</h5>
-              <small>1+ Año Trabajando</small>
+              <h5>Experience</h5>
+              <small>1+ Year</small>
             </article>
 
             <article className={styles.about__card}>
               <FiUsers className={styles.about__icon} />
-              <h5>Referencias</h5>
-              <small>1+ Contacto</small>
+              <h5>University studies</h5>
+              <small>1 Year in progress</small>
             </article>
 
             <article className={styles.about__card}>
               <BiCodeBlock className={styles.about__icon} />
-              <h5>Proyectos</h5>
-              <small>6+ Proyectos Completados</small>
+              <h5>Personal projects</h5>
+              <small>3+ Proyectos</small>
             </article>
 
 
           </div>
 
           <p>
-            Soy un estudiante de ingeniería informática, enfocado en el desarrollo de software,
-            testing y gestión de proyectos IT, autodidacta, disciplinado, apasionado por los desafíos
-            y el aprendizaje, con una enorme curiosidad. Disfruto trabajar en equipo, me considero
-            una persona sociable, observadora, participativa y responsable. Busco poner a disposición
-            mis habilidades para la resolución de problemas dentro del campo del desarrollo IT.
+          I am a computer engineering student, focused on software development, 
+          testing and IT project management, self-taught, disciplined, passionate 
+          about challenges and learning, with an enormous curiosity. I enjoy working 
+          in a team, I consider myself a sociable, observant, participatory and responsible 
+          person. I seek to make available my problem solving skills within the field 
+          of IT development.
           </p>
 
-          <a href="#contact" className='btn btn-primary'>Charlemos!</a>
+          <a href="#contact" className='btn btn-primary'>Let's talk!</a>
         </div>
 
       </div>

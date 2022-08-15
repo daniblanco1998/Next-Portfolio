@@ -45,14 +45,14 @@
 .about__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .about__card {
     background: linear-gradient(45deg, transparent, var(--color-primary));
     border: 0 solid transparent;
     border-radius: 8rem;
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: center;
 }
 

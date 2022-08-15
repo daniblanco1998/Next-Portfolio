@@ -1,75 +1,64 @@
 import styles from '../../styles/testimonials.module.css'
-import AVTR1 from '../../public/avatar1.jpg'
-import AVTR2 from '../../public/avatar2.jpg'
-import AVTR3 from '../../public/avatar3.jpg'
-import AVTR4 from '../../public/avatar4.jpg'
+import CERT1 from '../../public/certificado1.jpg'
+import CERT2 from '../../public/certificado2.jpg'
+import CERT3 from '../../public/certificado3.jpg'
+import CERT4 from '../../public/certificado4.jpg'
+import CERT5 from '../../public/certificado5.jpg'
+import CERT6 from '../../public/certificado6.jpg'
+import CERT7 from '../../public/certificado7.jpg'
 import Image from 'next/image'
-import Button from './modalButton'
-import ModalContainer from './modalContainer'
-import Modal from './modal'
 
-import { Pagination } from 'swiper';
+
+import { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+import 'swiper/css/navigation';
 
 
 const data = [
-  {
-    avatar: AVTR1,
-    name: 'Mileva Maric',
-    review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit Aut omnis at dolor,exercitationem nulla sapiente dolorem alias sit consequatur, repellat molestiae id. Animi'
-  },
-  {
-    avatar: AVTR2,
-    name: 'Marie Curie',
-    review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit Aut omnis at dolor,exercitationem nulla sapiente dolorem alias sit consequatur, repellat molestiae id. Animi'
-  },
-  {
-    avatar: AVTR3,
-    name: 'Albert Einstein',
-    review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit Aut omnis at dolor,exercitationem nulla sapiente dolorem alias sit consequatur, repellat molestiae id. Animi'
-  },
-  {
-    avatar: AVTR4,
-    name: 'Nicola Tesla',
-    review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit Aut omnis at dolor,exercitationem nulla sapiente dolorem alias sit consequatur, repellat molestiae id. Animi'
-  }
+  {certificate: CERT2},
+  {certificate: CERT3},
+  {certificate: CERT1},
+  {certificate: CERT4},
+  {certificate: CERT5},
+  {certificate: CERT6},
+  {certificate: CERT7}
 ]
 
 export const Testimonials = () => {
   return (
     <>
       <section id='testimonials'>
-        <h5>Review from clients</h5>
-        <h2>COMENTARIOS</h2>
+        <h4>Some of my</h4>
+        <h2>Certificates</h2>
 
         <Swiper id='container' className={styles.testimonials__container}
-          modules={[Pagination]}
-          spaceBetween={40}
-          slidesPerView={2}
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={0}
+          slidesPerView={1}
+          autoplay={{deplay: 800}}
+          navigation
           pagination={{ clickable: true }}>
           {
-            data.map(({ avatar, name, review }, index) => {
+            data.map(({certificate}, index) => {
               return (
                 <>
                   <SwiperSlide key={index} className={styles.testimonial}>
                     <div className={styles.client__avatar}>
-                      <Image src={avatar} alt='avatar-img' />
+                      <Image src={certificate} alt='certificate-img' className={styles.img_certificate} width={800} height={600}/>
                     </div>
-                    <h5 className={styles.client__name}>{name}</h5>
-                    <small className={styles.client__review}>{review}</small>
                   </SwiperSlide>
                 </>
               )
             })
           }
         </Swiper>
-        <ModalContainer>
-          <Button>Comentar</Button>
-        </ModalContainer>
+        
+        
       </section>
       
       

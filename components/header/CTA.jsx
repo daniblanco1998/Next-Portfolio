@@ -1,5 +1,4 @@
 import styles from '../../styles/header.module.css'
-import Link from 'next/link'
 
 export const CTA = () => {
   return (

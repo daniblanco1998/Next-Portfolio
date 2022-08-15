@@ -5,6 +5,12 @@ import { useRouter } from "next/router"
 
 export default function TaskFormPage(){
 
+  useEffect(() => {
+    if(query.id){
+      getTask()
+    }
+  }, [])
+
   const {query, push} = useRouter()
 
   const [newTask, setnewTask] = useState({
@@ -78,12 +84,6 @@ export default function TaskFormPage(){
     const data = await res.json()
     setnewTask({title: data.title, plot: data.plot})
   }
-
-  useEffect(() => {
-    if(query.id){
-      getTask()
-    }
-  }, [])
 
   return (
     <>

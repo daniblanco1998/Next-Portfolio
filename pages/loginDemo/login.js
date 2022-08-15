@@ -24,6 +24,7 @@ const LoginDemo = () => {
 
     const { data: session, status } = useSession()
     const router = useRouter()
+    console.log(session)
     
     useEffect(() => {
         (async () => {
@@ -43,13 +44,7 @@ const LoginDemo = () => {
 
                 <ContainerButton>
                     <Button onClick={() => signIn()}>
-                        Google
-                    </Button>
-                    <Button onClick={() => signIn()}>
-                        Facebook
-                    </Button>
-                    <Button onClick={() => signIn()}>
-                        Github
+                        Redes Sociales
                     </Button>
                 </ContainerButton>
 

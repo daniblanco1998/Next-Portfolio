@@ -1,11 +1,8 @@
 import styles from '../../styles/portfolio.module.css'
 import Image from 'next/image'
 import IMG1 from '../../public/portfolio1.png' 
-import IMG2 from '../../public/portfolio2.png'
 import IMG3 from '../../public/portfolio3.png' 
 import IMG4 from '../../public/portfolio4.jpg' 
-import IMG5 from '../../public/portfolio5.png' 
-import IMG6 from '../../public/portfolio6.jpg' 
 import Link from 'next/link'
 
 const data = [

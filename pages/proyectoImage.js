@@ -53,7 +53,7 @@ const App = () => {
       <div className={stylesContent.container}>
         <div className={stylesContent.center}>
           {photos.map(photo => <article className={stylesArticles.article} key={photo.id} onClick={() => open(photo.links.html)}>
-            <img src={photo.urls.regular}/>
+            <img src={photo.urls.regular} alt="articulos de la api"/>
             <p>{[photo.description, photo.alt_description].join(' - ')}</p>
           </article>)}
         </div>

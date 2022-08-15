@@ -3,56 +3,56 @@ import IMGnotTask from '../../public/img_noTareas.PNG'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { Layout } from '../../components/taskComponents/Layout'
-import { useState} from 'react'
+import { useState } from 'react'
 
 
-export default function taskApi({ tasks }) {
+export default function TaskApi({ tasks }) {
 
     const [state, setState] = useState({
         state: false
     })
     const router = useRouter()
-  
-    const deleteTask = async(id) => {
-        try {
-          await fetch(`http://localhost:3000/api/tasks/${id}`, {
-            method: 'DELETE',
-          })
-        } catch (error) {
-          console.log(error)
-        }
-    
-      }
 
-      const upDateTask = async (id) => {
+    const deleteTask = async (id) => {
         try {
-          await fetch(`http://localhost:3000/api/tasks/${id}`, {
-            method: 'PUT',
-            headers: {
-              "Content-Type":"application/json"
-            },
-            body: JSON.stringify(state)
-          }
-          )
+            await fetch(`http://localhost:3000/api/tasks/${id}`, {
+                method: 'DELETE',
+            })
         } catch (error) {
-          console.log(error)
+            console.log(error)
         }
-      }
-    
-    const handleState = async(id) => {
-        await setState({state: true})
+
+    }
+
+    const upDateTask = async (id) => {
+        try {
+            await fetch(`http://localhost:3000/api/tasks/${id}`, {
+                method: 'PUT',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(state)
+            }
+            )
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const handleState = async (id) => {
+        await setState({ state: true })
         await upDateTask(id)
         router.push("/tasksApi")
-      }
-  
-    const handleDlete = async(id) => {
+    }
+
+    const handleDlete = async (id) => {
         await deleteTask(id)
         router.push("/tasksApi")
     }
 
     console.log(tasks)
-    
-    
+
+
 
     if (tasks.length === 0) return (
         <Layout>
@@ -80,7 +80,7 @@ export default function taskApi({ tasks }) {
                             <h2 style={{ textAlign: 'center' }}>Tareas</h2>
                             <Card.Group itemsPerRow={2}>
                                 {
-                                    tasks.map(task => !task.state ?(
+                                    tasks.map(task => !task.state ? (
                                         <Card key={task._id} >
                                             <Card.Content onClick={() => router.push(`/tasksApi/myTasks/${task._id}`)}>
                                                 <Card.Header>{task.title}</Card.Header>
@@ -92,14 +92,16 @@ export default function taskApi({ tasks }) {
                                                     Editar
                                                 </Button>
                                                 <Button color="red" onClick={() => {
-                                                    handleDlete(task._id)}}>
+                                                    handleDlete(task._id)
+                                                }}>
                                                     Eliminar
                                                 </Button>
                                                 <Button color="green" onClick={() => {
-                                                        handleState(task._id)}}>
+                                                    handleState(task._id)
+                                                }}>
                                                     Listo
                                                 </Button>
-                                                
+
                                             </Card.Content>
                                         </Card>
                                     ) : null)
@@ -111,7 +113,7 @@ export default function taskApi({ tasks }) {
 
                     <Grid.Column>
                         <Container style={{ padding: '20px' }}>
-                        <h2 style={{ textAlign: 'center' }}>Tareas Listas</h2>
+                            <h2 style={{ textAlign: 'center' }}>Tareas Listas</h2>
                             <Card.Group itemsPerRow={2}>
                                 {
                                     tasks.map(task => task.state ? (
@@ -130,7 +132,7 @@ export default function taskApi({ tasks }) {
                                                 }}>
                                                     Eliminar
                                                 </Button>
-                                               
+
                                             </Card.Content>
                                         </Card>
                                     ) : null)

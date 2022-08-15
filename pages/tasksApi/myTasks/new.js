@@ -50,7 +50,7 @@ export default function TaskFormPage(){
 
   const createTask = async () => {
     try {
-      await fetch('http://localhost:3000/api/tasks', {
+      await fetch('https://next-portfolio-sigma-dun.vercel.app/api/tasks', {
         method: 'POST',
         headers: {
           "Content-Type":"application/json"
@@ -64,7 +64,7 @@ export default function TaskFormPage(){
 
   const upDateTask = async () => {
     try {
-      await fetch(`http://localhost:3000/api/tasks/${query.id}`, {
+      await fetch(`https://next-portfolio-sigma-dun.vercel.app/api/tasks/${query.id}`, {
         method: 'PUT',
         headers: {
           "Content-Type":"application/json"
@@ -80,7 +80,7 @@ export default function TaskFormPage(){
   const handleChange = (e) => setnewTask({...newTask,[e.target.name]: e.target.value})
 
   const getTask = async() => {
-    const res = await fetch(`http://localhost:3000/api/tasks/${query.id}`)
+    const res = await fetch(`https://next-portfolio-sigma-dun.vercel.app/api/tasks/${query.id}`)
     const data = await res.json()
     setnewTask({title: data.title, plot: data.plot})
   }

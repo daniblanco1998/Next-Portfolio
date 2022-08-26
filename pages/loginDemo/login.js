@@ -6,7 +6,7 @@ import { signIn, useSession, getProviders } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useEffect } from 'react'
-import MdBuildCircle from 'react-icons/md'
+
 
 // const ContainerButton = styled.div`
 //     display: flex;
@@ -48,7 +48,6 @@ const LoginDemo = () => {
                         Redes Sociales
                     </Button>
                 </ContainerButton> */}
-                <MdBuildCircle/>
                 <Title>EN MANTENIMIENTO</Title>
                 
                 <Link href="/">

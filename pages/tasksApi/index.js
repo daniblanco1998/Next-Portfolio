@@ -152,7 +152,7 @@ export default function TaskApi({ tasks }) {
 
 export async function getServerSideProps() {
 
-    const res = await fetch('https://next-portfolio-fvv3svzna-daniblanco1998.vercel.app/api/tasks')
+    const res = await fetch('https://next-portfolio-sigma-dun.vercel.app/api/tasks')
     const data = await res.json()
 
     return {

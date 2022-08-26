@@ -63,7 +63,7 @@ export default function TaskDetail({task, error}){
 
 export async function getServerSideProps({query: {id}}){
   
-  const res = await fetch(`https://next-portfolio-fvv3svzna-daniblanco1998.vercel.app/api/tasks/${id}`)
+  const res = await fetch(`https://next-portfolio-sigma-dun.vercel.app/api/tasks/${id}`)
 
   if(res.status ===  200){
     const task = await res.json()

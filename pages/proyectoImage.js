@@ -18,8 +18,14 @@ const Button = styled.button`
   outline: 0;
   cursor: pointer;
   margin-top: 0.6rem;
-  margin-right: 20px;
   position: absolute;
+  font-size: 25px
+`
+
+const Title = styled.h1`
+  position: relative;
+  color: white;
+  margin: 0 200px 0 20px
 `
 
 const App = () => {
@@ -28,6 +34,7 @@ const App = () => {
   return (
     <div>
       <header className={stylesHeader.header}>
+        <Title>search images</Title>
         <Formik
           initialValues={{ search: '' }}
           onSubmit={async values => {

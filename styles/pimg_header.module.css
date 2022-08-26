@@ -1,7 +1,6 @@
 
 .header{
     display: flex;
-    justify-content: space-around;
     background-color: #467cff;
     padding: 22px;
     box-shadow: 1px 2px 5px rgb(0,0,0, 0.3);
@@ -12,7 +11,7 @@
 .header input {
     outline: none;
     border: solid 1px #ffb12c;
-    padding: 10px 5px;
+    padding: 15px 10px;
     border-radius: 10px;
     width: 50em;
     cursor: text;

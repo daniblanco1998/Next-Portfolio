@@ -15,7 +15,7 @@ export default function TaskApi({ tasks }) {
 
     const deleteTask = async (id) => {
         try {
-            await fetch(`https://next-portfolio-fvv3svzna-daniblanco1998.vercel.app/api/tasks/${id}`, {
+            await fetch(`https://next-portfolio-sigma-dun.vercel.app/api/tasks/${id}`, {
                 method: 'DELETE',
             })
         } catch (error) {
@@ -26,7 +26,7 @@ export default function TaskApi({ tasks }) {
 
     const upDateTask = async (id) => {
         try {
-            await fetch(`https://next-portfolio-fvv3svzna-daniblanco1998.vercel.app/api/tasks/${id}`, {
+            await fetch(`https://next-portfolio-sigma-dun.vercel.app/api/tasks/${id}`, {
                 method: 'PUT',
                 headers: {
                     "Content-Type": "application/json"

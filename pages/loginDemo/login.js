@@ -6,13 +6,14 @@ import { signIn, useSession, getProviders } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useEffect } from 'react'
+import MdBuildCircle from 'react-icons/md'
 
-const ContainerButton = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-`
+// const ContainerButton = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-evenly;
+// `
 const Title = styled.h1`
   font-weight: normal;
   color: #eee;
@@ -40,13 +41,16 @@ const LoginDemo = () => {
     return (
         <Container>
             <Form>
-                <Title>Inicia sesión</Title>
+                {/* <Title>Inicia sesión</Title>
 
                 <ContainerButton>
                     <Button onClick={() => signIn()}>
                         Redes Sociales
                     </Button>
-                </ContainerButton>
+                </ContainerButton> */}
+
+                <Title>EN MANTENIMIENTO {<MdBuildCircle/>}</Title>
+
 
                 <Link href="/">
                     <Button>

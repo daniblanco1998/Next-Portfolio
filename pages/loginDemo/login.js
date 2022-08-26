@@ -49,9 +49,8 @@ const LoginDemo = () => {
                     </Button>
                 </ContainerButton> */}
 
-                <Title>EN MANTENIMIENTO {<MdBuildCircle/>}</Title>
-
-
+                <Title>EN MANTENIMIENTO</Title>
+                <MdBuildCircle/>
                 <Link href="/">
                     <Button>
                         Volver

@@ -90,6 +90,8 @@ section > h2 {
     color: var(--color-light)
 }
 
+/**/
+
 a{
     color: var(--color-secondary);
     transition: var(--transition);

@@ -20,7 +20,8 @@ export const Footer = () => {
       </ul>
 
       <div className={styles.footer__socials}>
-        <a href="https://www.linkedin.com/in/luisblanco-developper" target='_blank' rel="noreferrer"><BsLinkedin/></a> 
+
+        <a href="https://www.linkedin.com/in/luisblanco-mern?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZK9nRxAJS1yykTmcoYxI%2Fw%3D%3D" target='_blank' rel="noreferrer"><BsLinkedin/></a> 
         <a href="https://www.instagram.com/danielblanco_sc/" target='_blank' rel="noreferrer"><GrInstagram/></a>
         <a href="https://api.whatsapp.com/send/?phone=5491124099365" target='_blank' rel="noreferrer"><IoLogoWhatsapp/></a>
       </div>

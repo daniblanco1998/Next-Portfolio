@@ -17,7 +17,7 @@ export const Services = () => {
           <ul className= {styles.service__list}>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
-              <p>JavaScript</p>
+              <p>Node.Js</p>
             </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
@@ -45,6 +45,10 @@ export const Services = () => {
           </div>
 
           <ul className= {styles.service__list}>
+            <li>
+              <GrCheckmark className={styles.service__list_icon}/>
+              <p>JavaScript</p>
+            </li>
             <li>
               <GrCheckmark className={styles.service__list_icon}/>
               <p>React.Js</p>

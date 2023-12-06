@@ -55,23 +55,25 @@ export const Experience = () => {
             <article className={styles.experience__details}>
               <BsPatchCheckFill className={styles.experience__details_icon} />
               <div>
-                <h4>Node.JS</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
 
-            <article className={styles.experience__details}>
-              <BsPatchCheckFill className={styles.experience__details_icon} />
-              <div>
-                <h4>MongoDB</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-
-            <article className={styles.experience__details}>
-              <BsPatchCheckFill className={styles.experience__details_icon} />
-              <div>
                 <h4>Python</h4>
+                <small className="text-light">Experienced</small>
+              </div>
+            </article>
+
+            <article className={styles.experience__details}>
+              <BsPatchCheckFill className={styles.experience__details_icon} />
+              <div>
+                <h4>SQL</h4>
+                <small className="text-light">Experienced</small>
+              </div>
+            </article>
+
+            <article className={styles.experience__details}>
+              <BsPatchCheckFill className={styles.experience__details_icon} />
+              <div>
+                <h4>Node.JS</h4>
+
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
@@ -79,7 +81,9 @@ export const Experience = () => {
             <article className={styles.experience__details}>
               <BsPatchCheckFill className={styles.experience__details_icon} />
               <div>
-                <h4>MySQL</h4>
+
+                <h4>MongoDB</h4>
+
                 <small className="text-light">Basic</small>
               </div>
             </article>

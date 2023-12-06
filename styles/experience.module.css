@@ -21,7 +21,9 @@
 .experience__container > div h3 {
     text-align: center; 
     margin-bottom: 2rem;
-    color: var(--color-white);
+
+    color: var(--color-primary);
+
 }
 
 .experience__content{

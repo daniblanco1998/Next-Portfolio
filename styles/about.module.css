@@ -1,12 +1,15 @@
 .about__me {
-    width: 100%;
+
+    width: 120%;
     aspect-ratio: 1/1;
     border-radius: 20rem;
-    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+    background: linear-gradient(45deg, transparent,#88ddd6, transparent);
     display: grid;
     place-items: center;
-    transform: perspective(300px) translate3d(20px, 0px, 0px);
-    transition: transform 0.8s linear 0.2s;
+    padding-bottom: 5px;
+    /*transform: perspective(300px) translate3d(20px, 0px, 0px);
+    transition: transform 0.8s linear 0.2s;*/
+
 }
 
 .about__container{
@@ -22,7 +25,6 @@
     transform: rotate(-10deg);
     transition: all 400ms ease;
     background: transparent;
-    padding: 5%;
 }
 
 .about__me_image:hover {
@@ -33,26 +35,21 @@
 
 .about__me:hover {
     transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg); 
-    -moz-transform: rotate(360deg);
     transition: transform 0.8s linear 0.2s;
-    transition: -webkit-transform 0.8s linear 0.2s;
-    transition: -o-transform 0.8s linear 0.2s;
-    transition: -moz-transform 0.8s linear 0.2s;
 }
 
 .about__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    padding-top: 1rem;
 }
 
 .about__card {
-    background: linear-gradient(45deg, transparent, var(--color-primary));
+    background: linear-gradient(45deg, transparent, #88ddd6);
     border: 0 solid transparent;
     border-radius: 8rem;
-    padding: 1rem;
+
     text-align: center;
 }
 
@@ -63,24 +60,21 @@
 }
 
 
-
 .about__icon{
     color: var(--color-secondary);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+
 }
 
 .about__card h5 {
     font-size: 0.95rem;
 }
 
-.about__card small {
-    font-size: 0.7rem;
-    color: var(--color-light);
-}
 
 .about__content p {
-    margin: 2rem 0 2.6rem;
+    margin: 1rem 0 2.6rem;
     color: var(--color-light);
 }
 
@@ -131,4 +125,6 @@
         transform: rotate(10deg) perspective(500px) translate3d(5px, 0, 90px);
 
     }
+
 }
+

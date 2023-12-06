@@ -24,7 +24,6 @@
 
 .a__static1{
     position: relative;
-
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
     border-radius: 1em;
@@ -83,8 +82,6 @@
 
 .a__static2{
     position: relative;
-    color: var(--color-white);
-    border: 2px solid rgba(98, 3, 221, 0.425);
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
     border-radius: 1em;
@@ -147,8 +144,6 @@
     align-items: center;
     gap: 0.8rem;
     position: absolute;
-
-
     font-size: 2.5em;
 
 }
